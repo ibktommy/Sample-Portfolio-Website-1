@@ -1,0 +1,161 @@
+@media screen and (max-width: 1150px) {
+      /* SHOWCASE */
+      .showcase-content {
+        background: linear-gradient(
+          rgba(0,0,0,.6),
+          rgba(0,0,0,.6)
+        ),
+        url(../images/me-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+        display: grid;
+        place-content: center;
+      }
+    
+      .showcase-text {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding-left: 0;
+        line-height: 1.8;
+      }
+    
+      .showcase-text h1,
+      .showcase-text p span {
+        color: #fff;
+      }
+    
+      .showcase-text p {
+        text-align: center;
+      }
+}
+
+@media screen and (max-width: 850px) {
+    /* NAVIGATION */
+    #check {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+  
+    label {
+      display: inline-block;
+      font-size: 3rem;
+      color: var(--color-sec-light);
+    }
+  
+    label .close {
+      display: none;
+      color: #fff;
+    }
+  
+    .navlist {
+      display: none;
+    }
+  
+    label .menu,
+    label .close {
+      display: inline-block;
+      position: fixed;
+      right: 5%;
+      top: 1.3%;
+      z-index: 3;
+    }
+  
+    #check ~ .nav-content .navlist {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 30rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      background: linear-gradient(
+        rgba(126, 150, 128, .8),
+        rgba(126, 150, 128, .8)
+      );
+      transition: all 300ms ease-in;
+    }
+  
+    #check ~ .nav-content .navlist li {
+      margin: 4rem 0;
+    }
+  
+    #check ~ .nav-content .navlist li a {
+      color: #fff;
+    }
+  
+    #check ~ .nav-content label .close {
+      opacity: 0;
+      right: -5%;
+      transition: all 300ms ease-in;
+    }
+  
+    #check:checked ~ .nav-content .navlist {
+      right: 0;
+    }
+  
+    #check:checked ~ .nav-content label .close {
+      right: 5%;
+      opacity: 1;
+    }
+  
+    #check:checked ~ .nav-content .navlist ~ label .menu {
+      display: none;
+    }
+
+  /* ABOUT */
+  .about {
+    overflow: hidden;
+    transform: translateY(0);
+  }
+
+  .about-img {
+    flex-grow: 1;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .about-text,
+  .about-links {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    height: 60vh;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .showcase-content {
+    background-size: cover;
+    background-position: top center;
+  }
+
+  .showcase-text {
+    top: 20%;
+  }
+
+  .showcase-text_link {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+
+  .services small {
+    width: 100%;
+  }
+}
